@@ -1,3 +1,4 @@
+// System imports
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -7,11 +8,17 @@ import {
   Image
 } from 'react-native';
 
+// Components import
 import Topo from './src/components/topo';
 import Oponente from './src/components/Oponente';
 import Resultado from './src/components/Resultado';
 
+// syles import
 import styles from './src/styles/main-stayles';
+
+const imgPedra = require('./imgs/pedra.png');
+const imgPapel = require('./imgs/papel.png');
+const imgTesoura = require('./imgs/tesoura.png');
 
 export default class jokenpo extends Component {
 
@@ -72,21 +79,21 @@ export default class jokenpo extends Component {
           style={styles.botaoEscolha} 
           onPress={() => { this.escolhaUser('pedra'); }}
           >
-            <Image source={require('./imgs/pedra.png')} />
+            <Image source={imgPedra} />
             <Text style={styles.textoEscolha}>pedra</Text>
           </TouchableOpacity>
           <TouchableOpacity 
           style={styles.botaoEscolha} 
           onPress={() => { this.escolhaUser('papel'); }}
           >
-            <Image source={require('./imgs/papel.png')} />
+            <Image source={imgPapel} />
             <Text style={styles.textoEscolha}>papel</Text>
           </TouchableOpacity>
           <TouchableOpacity 
           style={styles.botaoEscolha} 
           onPress={() => { this.escolhaUser('tesoura'); }}
           >
-            <Image source={require('./imgs/tesoura.png')} />
+            <Image source={imgTesoura} />
             <Text style={styles.textoEscolha}>tesoura</Text>
           </TouchableOpacity>
         </View>
